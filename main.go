@@ -1,16 +1,13 @@
 package main
 
-import "fmt"
+import (
+	packageone "myapp/package"
+)
 
-var one = "Uno"
+var myVar = "This is my package level var."
 
 func main() {
+	blockVar := "Block var"
 
-	fmt.Println(one)
-
-	myFunc()
-}
-
-func myFunc() {
-	fmt.Println(one)
+	packageone.PrintMe(blockVar, myVar)
 }
